@@ -24,7 +24,7 @@ function play(playerChoice) {
   selectPlayer.textContent = playerChoice;
 
   if (playerChoice === computerChoice) {
-    text.textContent = "Durrang";
+    text.textContent = "Draw!";
   } else if (
     (playerChoice === "✋" && computerChoice === "✊") ||
     (playerChoice === "✊" && computerChoice === "✌️") ||
@@ -32,11 +32,11 @@ function play(playerChoice) {
   ) {
     yourScore++;
     yourScoreEl.textContent = yourScore;
-    text.textContent = "You are win";
+    text.textContent = "You are win:)";
   } else {
     computerScore++;
     computerScoreEl.textContent = computerScore;
-    text.textContent = "You are lose";
+    text.textContent = "You are lose:(";
   }
   restart.addEventListener("click", () => {
     if (computerScore > 0) {
