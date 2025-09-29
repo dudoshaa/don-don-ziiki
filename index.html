@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Don-don ziki</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <div
+          class="left"
+          data-aos="fade-right"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="1500"
+        >
+          <a class="site__name" href="#">RPS</a>
+          <i class="fa-solid fa-gamepad"></i>
+        </div>
+        <div class="center">
+          <ul
+            class="score__wrapper"
+            data-aos="fade-up"
+            data-aos-duration="3000"
+          >
+            <li class="score__item">
+              <span>Your score:</span> <span id="your-score">0</span>
+            </li>
+            <li class="score__item">
+              <span>Computer score:</span>
+              <span id="computer__score">0</span>
+            </li>
+          </ul>
+        </div>
+        <button
+          data-aos="fade-left"
+          data-aos-anchor="#example-anchor"
+          data-aos-duration="1500"
+          class="right"
+          id="restart"
+        >
+          <i class="fa-solid fa-repeat"></i>
+        </button>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div
+          class="handle__wrapper"
+          id="handle"
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
+        >
+          <button class="rock" id="rock">✊</button
+          ><button class="scissors" id="scissors">✌️</button>
+          <button class="paper" id="paper">✋</button>
+        </div>
+      </div>
+      <div class="container select__wrapper" id="select">
+        <span
+          class="select"
+          id="select-player"
+          data-aos="fade-right"
+          data-aos-duration="1500"
+          data-aos-easing="ease-in-sine"
+        >
+          ✊
+        </span>
+        <p data-aos="zoom-out-right" data-aos-duration="1500">VS</p>
+
+        <span
+          class="select"
+          id="select-comp"
+          data-aos="fade-left"
+          data-aos-anchor="#example-anchor"
+          data-aos-offset="500"
+          data-aos-duration="1500"
+        >
+          ✊
+        </span>
+      </div>
+      <p class="container text" id="text"></p>
+    </main>
+    <footer class="footer"></footer>
+    <script src="./app.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
