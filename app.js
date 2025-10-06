@@ -31,6 +31,7 @@ function play(playerChoice) {
     (playerChoice === "✌️" && computerChoice === "✋")
   ) {
     yourScore++;
+
     yourScoreEl.textContent = yourScore;
     text.textContent = "You are win:)";
   } else {
@@ -38,12 +39,12 @@ function play(playerChoice) {
     computerScoreEl.textContent = computerScore;
     text.textContent = "You are lose:(";
   }
+
   restart.addEventListener("click", () => {
-    if (computerScore > 0) {
-      return (computerScore.textContent = "0");
-    } else {
-      return computerScore;
-    }
+    computerScoreEl.textContent = 0;
+    yourScoreEl.textContent = 0;
+    yourScore = 0;
+    computerScore = 0;
   });
 }
 rock.addEventListener("click", () => {
