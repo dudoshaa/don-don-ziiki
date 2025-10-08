@@ -17,7 +17,6 @@ function getComputerChoice() {
 const selectComp = document.getElementById("select-comp");
 const selectPlayer = document.getElementById("select-player");
 const text = document.getElementById("text");
-
 function play(playerChoice) {
   const computerChoice = getComputerChoice();
   selectComp.textContent = computerChoice;
@@ -31,7 +30,6 @@ function play(playerChoice) {
     (playerChoice === "✌️" && computerChoice === "✋")
   ) {
     yourScore++;
-
     yourScoreEl.textContent = yourScore;
     text.textContent = "You are win:)";
   } else {
